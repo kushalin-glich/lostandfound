@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Lost &amp; Found | Management System</title>
+  <link rel="stylesheet" href="projectstyle.css">
+</head>
+<body>
+
+  <!-- Hidden inputs for CSS-only interactivity -->
+  <input type="radio" name="tab" id="tab-lost" class="sr-only" checked>
+  <input type="radio" name="tab" id="tab-found" class="sr-only">
+
+  <input type="radio" name="category" id="cat-all" class="sr-only" checked>
+  <input type="radio" name="category" id="cat-electronics" class="sr-only">
+  <input type="radio" name="category" id="cat-idcards" class="sr-only">
+  <input type="radio" name="category" id="cat-books" class="sr-only">
+  <input type="radio" name="category" id="cat-keys" class="sr-only">
+  <input type="radio" name="category" id="cat-personal" class="sr-only">
+
+  <input type="checkbox" id="modal-toggle" class="sr-only">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-icon">🎓</span>
+        <div class="logo-text">
+          <h1>Campus Lost &amp; Found</h1>
+          <p class="tagline">Report &bull; Search &bull; Recover</p>
+        </div>
+      </div>
+      <nav class="header-nav">
+        <a href="#items-section">Browse</a>
+        <a href="#stats">Stats</a>
+        <label for="modal-toggle" class="nav-report-btn">+ Report Item</label>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <h2>Lost Something on Campus?</h2>
+      <p>Search through reported items or file a new report to help reunite lost belongings with their owners.</p>
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="text" placeholder="Search by item name, location, or keyword...">
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section class="stats-bar" id="stats">
+    <div class="container stats-inner">
+      <div class="stat-card">
+        <span class="stat-number">24</span>
+        <span class="stat-label">Items Reported</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">18</span>
+        <span class="stat-label">Items Found</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">15</span>
+        <span class="stat-label">Items Returned</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">92%</span>
+        <span class="stat-label">Recovery Rate</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content" id="items-section">
+    <div class="container">
+
+      <!-- Tab Navigation -->
+      <div class="tab-nav">
+        <label for="tab-lost" class="tab-label tab-lost-label">
+          <span class="tab-icon">📢</span> Lost Items
+        </label>
+        <label for="tab-found" class="tab-label tab-found-label">
+          <span class="tab-icon">✅</span> Found Items
+        </label>
+      </div>
+
+      <!-- Category Filters -->
+      <div class="category-filters">
+        <span class="filter-title">Filter by:</span>
+        <label for="cat-all" class="cat-label cat-label-all">All</label>
+        <label for="cat-electronics" class="cat-label cat-label-electronics">💻 Electronics</label>
+        <label for="cat-idcards" class="cat-label cat-label-idcards">🪪 ID Cards</label>
+        <label for="cat-books" class="cat-label cat-label-books">📚 Books / Notes</label>
+        <label for="cat-keys" class="cat-label cat-label-keys">🔑 Keys</label>
+        <label for="cat-personal" class="cat-label cat-label-personal">👜 Personal</label>
+      </div>
+
+      <!-- Items Grid -->
+      <div class="items-grid">
+
+        <!-- LOST ITEMS -->
+
+        <article class="item-card lost-item electronics">
+          <div class="card-badge badge-lost">Lost</div>
+          <div class="card-icon">💻</div>
+          <h3 class="card-title">MacBook Pro 14"</h3>
+          <div class="card-details">
+            <p><span class="detail-label">📍 Location:</span> Central Library, 2nd Floor</p>
+            <p><span class="detail-label">📅 Date:</span> October 25, 2026</p>
+            <p><span class="detail-label">🏷️ Category:</span> Electronics</p>
+          </div>
+          <p class="card-description">Silver MacBook Pro with a blue protective case and "CS'26" sticker on the lid.</p>
+          <div class="card-contact">
+            <span>📧</span> rahul.sharma@university.edu
+          </div>
+        </article>
+
+        <article class="item-card lost-item idcards">
+          <div class="card-badge badge-lost">Lost</div>
+          <div class="card-icon">🪪</div>
+          <h3 class="card-title">Student ID Card</h3>
+          <div class="card-details">
+            <p><span class="detail-label">📍 Location:</span> Main Cafeteria</p>
+            <p><span class="detail-label">📅 Date:</span> October 24, 2026</p>
+            <p><span class="detail-label">🏷️ Category:</span> ID Cards</p>
+          </div>
+          <p class="card-description">University student ID card for Roll No. 21CSE1045. Name: Priya Mehta.</p>
+          <div class="card-contact">
+            <span>📧</span> priya.mehta@university.edu
+          </div>
+        </article>
+
+        <article class="item-card lost-item books">
+          <div class="card-badge badge-lost">Lost</div>
+          <div class="card-icon">📚</div>
+          <h3 class="card-title">Calculus Textbook (Thomas)</h3>
+          <div class="card-details">
+            <p><span class="detail-label">📍 Location:</span> Room 201, Academic Block</p>
+            <p><span class="detail-label">📅 Date:</span> October 23, 2026</p>
+            <p><span class="detail-label">🏷️ Category:</span> Books / Notes</p>
+          </div>
+          <p class="card-description">Hardcover, 14th edition. Has highlighted sections in chapters 4-7 and sticky notes throughout.</p>
+          <div class="card-contact">
+            <span>📧</span> amit.kumar@university.edu
+          </div>
+        </article>
+
+        <article class="item-card lost-item keys">
+          <div class="card-badge badge-lost">Lost</div>
+          <div class="card-icon">🔑</div>
+          <h3 class="card-title">Car Keys – Red Keychain</h3>
+          <div class="card-details">
+            <p><span class="detail-label">📍 Location:</span> Parking Lot B</p>
+            <p><span class="detail-label">📅 Date:</span> October 22, 2026</p>
+            <p><span class="detail-label">🏷️ Category:</span> Keys</p>
+          </div>
+          <p class="card-description">Honda car keys on a red leather keychain with a small teddy bear charm attached.</p>
+          <div class="card-contact">
+            <span>📞</span> +91 98765 43210
+          </div>
+        </article>
+
+        <article class="item-card lost-item personal">
+          <div class="card-badge badge-lost">Lost</div>
+          <div class="card-icon">👜</div>
+          <h3 class="card-title">Black Leather Wallet</h3>
+          <div class="card-details">
+            <p><span class="detail-label">📍 Location:</span> Gymnasium</p>
+            <p><span class="detail-label">📅 Date:</span> October 21, 2026</p>
+            <p><span class="detail-label">🏷️ Category:</span> Personal Accessories</p>
+          </div>
+          <p class="card-description">Black leather bifold wallet. Contains no cash but has personal cards inside.</p>
+          <div class="card-contact">
+            <span>📧</span> deepak.singh@university.edu
+          </div>
+        </article>
+
+        <article class="item-card lost-item electronics">
+          <div class="card-badge badge-lost">Lost</div>
+          <div class="card-icon">🎧</div>
+          <h3 class="card-title">Wireless Earbuds (AirPods Pro)</h3>
+          <div class="card-details">
+            <p><span class="detail-label">📍 Location:</span> Lab 105, CS Block</p>
+            <p><span class="detail-label">📅 Date:</span> October 20, 2026</p>
+            <p><span class="detail-label">🏷️ Category:</span> Electronics</p>
+          </div>
+          <p class="card-description">White AirPods Pro in a black silicone case with the initials "S.K." engraved.</p>
+          <div class="card-contact">
+            <span>📞</span> +91 87654 32109
+          </div>
+        </article>
+
+        <article class="item-card lost-item books">
+          <div class="card-badge badge-lost">Lost</div>
+          <div class="card-icon">📓</div>
+          <h3 class="card-title">Notebook – Blue Cover</h3>
+          <div class="card-details">
+            <p><span class="detail-label">📍 Location:</span> Lecture Hall A</p>
+            <p><span class="detail-label">📅 Date:</span> October 19, 2026</p>
+            <p><span class="detail-label">🏷️ Category:</span> Books / Notes</p>
+          </div>
+          <p class="card-description">Spiral-bound notebook with blue cover. Contains handwritten Data Structures notes.</p>
+          <div class="card-contact">
+            <span>📧</span> sneha.gupta@university.edu
+          </div>
+        </article>
+
+        <article class="item-card lost-item personal">
+          <div class="card-badge badge-lost">Lost</div>
+          <div class="card-icon">🕶️</div>
+          <h3 class="card-title">Ray-Ban Sunglasses</h3>
+          <div class="card-details">
+            <p><span class="detail-label">📍 Location:</span> Main Gate Entrance</p>
+            <p><span class="detail-label">📅 Date:</span> October 26, 2026</p>
+            <p><span class="detail-label">🏷️ Category:</span> Personal Accessories</p>
+          </div>
+          <p class="card-description">Black Ray-Ban Wayfarer sunglasses in a brown hard case.</p>
+          <div class="card-contact">
+            <span>📞</span> +91 76543 21098
+          </div>
+        </article>
+
+        <!-- FOUND ITEMS -->
+
+        <article class="item-card found-item electronics">
+          <div class="card-badge badge-found">Found</div>
+          <div class="card-icon">📱</div>
+          <h3 class="card-title">iPhone 14 – Blue</h3>
+          <div class="card-details">
+            <p><span class="detail-label">📍 Location:</span> Student Center Lounge</p>
+            <p><span class="detail-label">📅 Date:</span> October 25, 2026</p>
+            <p><span class="detail-label">🏷️ Category:</span> Electronics</p>
+          </div>
+          <p class="card-description">Blue iPhone 14 with a cracked screen protector. Found on a couch near the vending machines.</p>
+          <div class="card-contact">
+            <span>📧</span> found.desk@university.edu
+          </div>
+        </article>
+
+        <article class="item-card found-item idcards">
+          <div class="card-badge badge-found">Found</div>
+          <div class="card-icon">📇</div>
+          <h3 class="card-title">Library Access Card</h3>
+          <div class="card-details">
+            <p><span class="detail-label">📍 Location:</span> Central Library Entrance</p>
+            <p><span class="detail-label">📅 Date:</span> October 24, 2026</p>
+            <p><span class="detail-label">🏷️ Category:</span> ID Cards</p>
+          </div>
+          <p class="card-description">University library card found near the book return counter. Name partially visible.</p>
+          <div class="card-contact">
+            <span>📧</span> library@university.edu
+          </div>
+        </article>
+
+        <article class="item-card found-item books">
+          <div class="card-badge badge-found">Found</div>
+          <div class="card-icon">🧪</div>
+          <h3 class="card-title">Chemistry Lab Manual</h3>
+          <div class="card-details">
+            <p><span class="detail-label">📍 Location:</span> Lab 302, Science Block</p>
+            <p><span class="detail-label">📅 Date:</span> October 23, 2026</p>
+            <p><span class="detail-label">🏷️ Category:</span> Books / Notes</p>
+          </div>
+          <p class="card-description">Printed lab manual for CHM201. Has "Section B" written on the first page in pen.</p>
+          <div class="card-contact">
+            <span>📧</span> chem.dept@university.edu
+          </div>
+        </article>
+
+        <article class="item-card found-item keys">
+          <div class="card-badge badge-found">Found</div>
+          <div class="card-icon">🗝️</div>
+          <h3 class="card-title">Set of Dorm Room Keys</h3>
+          <div class="card-details">
+            <p><span class="detail-label">📍 Location:</span> Admin Office Front Desk</p>
+            <p><span class="detail-label">📅 Date:</span> October 22, 2026</p>
+            <p><span class="detail-label">🏷️ Category:</span> Keys</p>
+          </div>
+          <p class="card-description">Three keys on a metal ring with a hostel logo tag. Found in the corridor near Block D.</p>
+          <div class="card-contact">
+            <span>📞</span> +91 11 2345 6789
+          </div>
+        </article>
+
+        <article class="item-card found-item personal">
+          <div class="card-badge badge-found">Found</div>
+          <div class="card-icon">☂️</div>
+          <h3 class="card-title">Red Umbrella</h3>
+          <div class="card-details">
+            <p><span class="detail-label">📍 Location:</span> Auditorium, Row 12</p>
+            <p><span class="detail-label">📅 Date:</span> October 21, 2026</p>
+            <p><span class="detail-label">🏷️ Category:</span> Personal Accessories</p>
+          </div>
+          <p class="card-description">Foldable red umbrella with a wooden handle. Left behind after the cultural fest.</p>
+          <div class="card-contact">
+            <span>📧</span> events@university.edu
+          </div>
+        </article>
+
+        <article class="item-card found-item electronics">
+          <div class="card-badge badge-found">Found</div>
+          <div class="card-icon">💾</div>
+          <h3 class="card-title">USB Flash Drive (32 GB)</h3>
+          <div class="card-details">
+            <p><span class="detail-label">📍 Location:</span> Computer Lab, Room 110</p>
+            <p><span class="detail-label">📅 Date:</span> October 20, 2026</p>
+            <p><span class="detail-label">🏷️ Category:</span> Electronics</p>
+          </div>
+          <p class="card-description">SanDisk 32 GB USB drive. Was left plugged into workstation #7.</p>
+          <div class="card-contact">
+            <span>📧</span> lab.admin@university.edu
+          </div>
+        </article>
+
+        <article class="item-card found-item idcards">
+          <div class="card-badge badge-found">Found</div>
+          <div class="card-icon">🪪</div>
+          <h3 class="card-title">Driving License</h3>
+          <div class="card-details">
+            <p><span class="detail-label">📍 Location:</span> Near Campus Bookstore</p>
+            <p><span class="detail-label">📅 Date:</span> October 26, 2026</p>
+            <p><span class="detail-label">🏷️ Category:</span> ID Cards</p>
+          </div>
+          <p class="card-description">Indian driving license found on the footpath near the bookstore. State: Maharashtra.</p>
+          <div class="card-contact">
+            <span>📧</span> security@university.edu
+          </div>
+        </article>
+
+        <article class="item-card found-item personal">
+          <div class="card-badge badge-found">Found</div>
+          <div class="card-icon">⌚</div>
+          <h3 class="card-title">Silver Wristwatch</h3>
+          <div class="card-details">
+            <p><span class="detail-label">📍 Location:</span> Sports Complex, Track Field</p>
+            <p><span class="detail-label">📅 Date:</span> October 19, 2026</p>
+            <p><span class="detail-label">🏷️ Category:</span> Personal Accessories</p>
+          </div>
+          <p class="card-description">Silver analog wristwatch with a metal band. Found near the long-jump pit.</p>
+          <div class="card-contact">
+            <span>📧</span> sports.office@university.edu
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Floating Report Button -->
+      <label for="modal-toggle" class="fab-report">+ Report</label>
+
+    </div>
+  </main>
+
+  <!-- REPORT ITEM MODAL -->
+  <div class="modal-overlay">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h2>Report an Item</h2>
+        <label for="modal-toggle" class="modal-close">&times;</label>
+      </div>
+      <form class="report-form" action="#" method="post">
+        <div class="form-group">
+          <label class="form-label">Report Type</label>
+          <div class="form-radio-group">
+            <label class="radio-option">
+              <input type="radio" name="report-type" value="lost" checked> I Lost an Item
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="report-type" value="found"> I Found an Item
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="item-name" class="form-label">Item Name <span class="required">*</span></label>
+          <input type="text" id="item-name" name="item-name" placeholder="e.g., Blue Backpack" required>
+        </div>
+        <div class="form-group">
+          <label for="item-category" class="form-label">Category <span class="required">*</span></label>
+          <select id="item-category" name="item-category" required>
+            <option value="" disabled selected>Select a category</option>
+            <option value="electronics">Electronics</option>
+            <option value="idcards">ID Cards</option>
+            <option value="books">Books / Notes</option>
+            <option value="keys">Keys</option>
+            <option value="personal">Personal Accessories</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="item-location" class="form-label">Location Last Seen <span class="required">*</span></label>
+          <input type="text" id="item-location" name="item-location" placeholder="e.g., Library, 2nd Floor" required>
+        </div>
+        <div class="form-group">
+          <label for="item-campus" class="form-label">Campus</label>
+          <select id="item-campus" name="item-campus">
+            <option value="main">Main Campus</option>
+            <option value="north">North Campus</option>
+            <option value="south">South Campus</option>
+            <option value="east">East Campus</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="item-date" class="form-label">Date <span class="required">*</span></label>
+          <input type="date" id="item-date" name="item-date" required>
+        </div>
+        <div class="form-group">
+          <label for="item-desc" class="form-label">Description</label>
+          <textarea id="item-desc" name="item-desc" rows="3" placeholder="Describe the item in detail (color, brand, distinguishing features)..."></textarea>
+        </div>
+        <div class="form-group">
+          <label for="item-contact" class="form-label">Contact Info <span class="required">*</span></label>
+          <input type="text" id="item-contact" name="item-contact" placeholder="Email or phone number" required>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn-submit">Submit Report</button>
+          <label for="modal-toggle" class="btn-cancel">Cancel</label>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-section">
+        <h4>Campus Lost &amp; Found</h4>
+        <p>A campus-wide initiative to help students, faculty, and staff recover lost belongings quickly and efficiently.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#items-section">Browse Items</a></li>
+          <li><a href="#stats">Statistics</a></li>
+          <li><a href="#">Contact Admin</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <p>📧 lostandfound@university.edu</p>
+        <p>📞 +91 11 2345 6789</p>
+        <p>📍 Admin Block, Room 102</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Campus Lost &amp; Found Management System. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
